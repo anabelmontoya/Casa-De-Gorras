@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+
+    <title>House Of Caps</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+</head>
+
+<body>
+<header id="inicio">
+
+    <div class="menu container">
+
+        <img src="imagenes/logo de proyecto.jpeg"
+             class="logo"
+             alt="House Of Caps">
+
+        <input type="checkbox" id="menu">
+
+        <label for="menu" class="menu-icono">
+            ☰
+        </label>
+
+        <nav class="navbar">
+
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#horarios">Horarios</a></li>
+                <li><a href="#formulario">Contacto</a></li>
+            </ul>
+
+        </nav>
+
+    </div>
+
+
+    
+
+    <div class="header-content container">
+
+        <div class="swiper mySwiper-1">
+
+            <div class="swiper-wrapper">
+
+
+                <div class="swiper-slide">
+
+                    <div class="slider">
+
+                        <div class="slider-text">
+
+                            <h1>HOUSE OF CAPS</h1>
+
+                            <p>
+                                En House Of Caps encontrarás
+                                gorras modernas, cómodas y con
+                                estilo único, perfectas para
+                                destacar en cualquier ocasión.
+                            </p>
+
+                            <div class="botones">
+
+                                <a href="#formulario"
+                                   class="btn-1">
+                                    Comprar
+                                </a>
+
+                                <a href="#productos"
+                                   class="btn-1">
+                                    Modelos
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="slider-img">
+
+                            <img src="imagenes/images.jpg"
+                                 alt="House Of Caps">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                
+
+                <div class="swiper-slide">
+
+                    <div class="slider">
+
+                        <div class="slider-text">
+
+                            <h1>GORRAS NEGRAS</h1>
+
+                            <p>
+                                Descubre nuestros modelos de
+                                gorras negras, modernas y
+                                perfectas para combinar.
+                            </p>
+
+                            <div class="botones">
+
+                                <a href="#formulario"
+                                   class="btn-1">
+                                    Comprar
+                                </a>
+
+                                <a href="#productos"
+                                   class="btn-1">
+                                    Modelos
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="slider-img">
+
+                            <img src="imagenes/negro1.jpg"
+                                 alt="Gorra negra">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+        
+
+                <div class="swiper-slide">
+
+                    <div class="slider">
+
+                        <div class="slider-text">
+
+                            <h1>GORRAS COMBINADAS</h1>
+
+                            <p>
+                                Encuentra diferentes modelos,
+                                colores y diseños para expresar
+                                tu personalidad y estilo.
+                            </p>
+
+                            <div class="botones">
+
+                                <a href="#formulario"
+                                   class="btn-1">
+                                    Comprar
+                                </a>
+
+                                <a href="#productos"
+                                   class="btn-1">
+                                    Modelos
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="slider-img">
+
+                            <img src="imagenes/gorra1.webp"
+                                 alt="Gorra combinada">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                 
+
+                <div class="swiper-slide">
+
+                    <div class="slider">
+
+                        <div class="slider-text">
+
+                            <h1>GORRAS CAMUFLADAS</h1>
+
+                            <p>
+                                Dale un toque diferente a tu
+                                estilo con nuestros modernos
+                                modelos de gorras camufladas.
+                            </p>
+
+                            <div class="botones">
+
+                                <a href="#formulario"
+                                   class="btn-1">
+                                    Comprar
+                                </a>
+
+                                <a href="#productos"
+                                   class="btn-1">
+                                    Modelos
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="slider-img">
+
+                            <img src="imagenes/camuflado1.jpg"
+                                 alt="Gorra camuflada">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="swiper-button-next"></div>
+
+            <div class="swiper-button-prev"></div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+            
+
+            <div class="swiper-button-next"></div>
+
+            <div class="swiper-button-prev"></div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+    
+
+<section class="productos-section" id="productos">
+
+    <div class="container">
+
+
+        <div class="titulo-productos">
+
+            <h2>NUESTROS PRODUCTOS</h2>
+
+            <p>
+                Encuentra la gorra perfecta para tu estilo
+            </p>
+
+        </div>
+
+
+      
+
+        <div class="categorias">
+
+    <button type="button"
+            class="categoria-btn activo"
+            onclick="mostrarCategoria('combinadas', this)">
+        COMBINADAS
+    </button>
+
+    <button type="button"
+            class="categoria-btn"
+            onclick="mostrarCategoria('camufladas', this)">
+        CAMUFLADAS
+    </button>
+
+    <button type="button"
+            class="categoria-btn"
+            onclick="mostrarCategoria('negras', this)">
+        NEGRAS
+    </button>
+
+</div>
+
+
+
+            
+        
+
+        <div class="categoria-productos activa"
+             id="combinadas">
+
+            <h2 class="titulo-categoria">
+                GORRAS COMBINADAS
+            </h2>
+
+            <div class="productos-grid">
+
+
+                <div class="producto-card">
+
+                    <img src="imagenes/gorra3.webp"
+                         alt="Gorra Combinada 1">
+
+                    <div class="producto-info">
+
+                        <h3>Gorra Combinada 1</h3>
+
+                        <p>Calidad premium</p>
+                        <div class="stock">
+                            120 disponibles
+                        </div>
+
+                        <span>35 Bs</span>
+
+                        <button type="button"
+                        class="buy-btn"
+                                data-producto="Gorra Combinada 1 - 35 Bs">
+
+                            Comprar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="producto-card">
+
+                    <img src="imagenes/gorra1.webp"
+                         alt="Gorra Combinada 2">
+
+                    <div class="producto-info">
+
+                        <h3>Gorra Combinada 2</h3>
+
+                        <p>Calidad premium</p>
+                        <div class="stock">
+                            120 disponibles
+                        </div>
+
+                        <span>45 Bs</span>
+
+                        <button type="button"
+                         class="buy-btn"
+                                data-producto="Gorra Combinada 2 - 45 Bs">
+
+                            Comprar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="producto-card">
+
+                    <img src="imagenes/gorra5.webp"
+                         alt="Gorra Combinada 3">
+
+                    <div class="producto-info">
+
+                        <h3>Gorra Combinada 3</h3>
+
+                        <p>Calidad premium</p>
+                        <div class="stock">
+                            120 disponibles
+                        </div>
+
+                        <span>40 Bs</span>
+
+                        <button type="button"
+                         class="buy-btn"
+                                data-producto="Gorra Combinada 3 - 40 Bs">
+
+                            Comprar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="producto-card">
+
+                    <img src="imagenes/gorra6.webp"
+                         alt="Gorra Combinada 4">
+
+                    <div class="producto-info">
+
+                        <h3>Gorra Combinada 4</h3>
+
+                        <p>Calidad premium</p>
+                        <div class="stock">
+                            120 disponibles
+                        </div>
+
+                        <span>40 Bs</span>
+
+                        <button type="button"
+                        class="buy-btn"
+                                data-producto="Gorra Combinada 4 - 40 Bs">
+
+                            Comprar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+             
+
+                <div class="producto-card">
+
+                    <img src="imagenes/gorra7.webp"
+                         alt="Gorra Combinada 5">
+
+                    <div class="producto-info">
+
+                        <h3>Gorra Combinada 5</h3>
+
+                        <p>Calidad premium</p>
+                    <div class="stock">
+                            120 disponibles
+                        </div>
+                        <span>45 Bs</span>
+
+                        <button type="button"
+                        class="buy-btn"
+                                data-producto="Gorra Combinada 5 - 45 Bs">
+
+                            Comprar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                
+
+                <div class="producto-card">
+
+                    <img src="imagenes/gorra8.jpg"
+                         alt="Gorra Combinada 6">
+
+                    <div class="producto-info">
+
+                        <h3>Gorra Combinada 6</h3>
+
+                        <p>Calidad premium</p>
+                        <div class="stock">
+                            120 disponibles
+                        </div>
+
+                        <span>35 Bs</span>
+
+                        <button type="button"
+                        class="buy-btn"
+                                data-producto="Gorra Combinada 6 - 35 Bs">
+
+                            Comprar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                
+
+                <div class="producto-card">
+
+                    <img src="imagenes/gorra9.jpg"
+                         alt="Gorra Combinada 7">
+
+                    <div class="producto-info">
+
+                        <h3>Gorra Combinada 7</h3>
+
+                        <p>Calidad premium</p>
+                        <div class="stock">
+                            120 disponibles
+                        </div>
+
+                        <span>35 Bs</span>
+
+                        <button type="button"
+                        class="buy-btn"
+                                data-producto="Gorra Combinada 7 - 35 Bs">
+
+                            Comprar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+              
+
+                <div class="producto-card">
+
+                    <img src="imagenes/images.jpg"
+                         alt="Gorra Combinada 8">
+
+                    <div class="producto-info">
+
+                        <h3>Gorra Combinada 8</h3>
+
+                        <p>Calidad premium</p>
+                        <div class="stock">
+                            120 disponibles
+                        </div>
+
+                        <span>45 Bs</span>
+
+                        <button type="button"
+                        class="buy-btn"
+                                data-producto="Gorra Combinada 8 - 45 Bs">
+
+                            Comprar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        
+       
+
+        <div class="categoria-productos"
+             id="camufladas">
+
+            <h2 class="titulo-categoria">
+                GORRAS CAMUFLADAS
+            </h2>
+
+            <div class="productos-grid">
+
+
+                
+
+                <div class="producto-card">
+
+                    <img src="imagenes/camuflado1.jpg"
+                         alt="Gorra Camuflada 1">
+
+                    <div class="producto-info">
+
+                        <h3>Gorra Camuflada 1</h3>
+
+                        <p>Calidad premium</p>
+                        <div class="stock">
+                            120 disponibles
+                        </div>
+
+                        <span>35 Bs</span>
+
+                        <button type="button"
+                        class="buy-btn"
+                                data-producto="Gorra Camuflada 1 - 35 Bs">
+
+                            Comprar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                
+
+                <div class="producto-card">
+
+                    <img src="imagenes/camuflado2.webp"
+                         alt="Gorra Camuflada 2">
+
+                    <div class="producto-info">
+
+                        <h3>Gorra Camuflada 2</h3>
+
+                        <p>Calidad premium</p>
+                        <div class="stock">
+                            120 disponibles
+                        </div>
+
+                        <span>35 Bs</span>
+
+                        <button type="button"
+                        class="buy-btn"
+                                data-producto="Gorra Camuflada 2 - 35 Bs">
+
+                            Comprar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+              
+
+                <div class="producto-card">
+
+                    <img src="imagenes/camuflado3.jpg"
+                         alt="Gorra Camuflada 3">
+
+                    <div class="producto-info">
+
+                        <h3>Gorra Camuflada 3</h3>
+
+                        <p>Calidad premium</p>
+                        <div class="stock">
+                            120 disponibles
+                        </div>
+
+                        <span>35 Bs</span>
+
+                        <button type="button"
+                        class="buy-btn"
+                                data-producto="Gorra Camuflada 3 - 35 Bs">
+
+                            Comprar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+               
+
+                <div class="producto-card">
+
+                    <img src="imagenes/camuflado4.jpg"
+                         alt="Gorra Camuflada 4">
+
+                    <div class="producto-info">
+
+                        <h3>Gorra Camuflada 4</h3>
+
+                        <p>Calidad premium</p>
+                        <div class="stock">
+                            120 disponibles
+                        </div>
+
+                        <span>35 Bs</span>
+
+                        <button type="button"
+                        class="buy-btn"
+                                data-producto="Gorra Camuflada 4 - 35 Bs">
+
+                            Comprar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                
+
+                <div class="producto-card">
+
+                    <img src="imagenes/camuflado5.webp"
+                         alt="Gorra Camuflada 5">
+
+                    <div class="producto-info">
+
+                        <h3>Gorra Camuflada 5</h3>
+
+                        <p>Calidad premium</p>
+                        <div class="stock">
+                            120 disponibles
+                        </div>
+
+                        <span>35 Bs</span>
+
+                        <button type="button"
+                        class="buy-btn"
+                                data-producto="Gorra Camuflada 5 - 35 Bs">
+
+                            Comprar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                
+
+                <div class="producto-card">
+
+                    <img src="imagenes/camuflado6.jpg"
+                         alt="Gorra Camuflada 6">
+
+                    <div class="producto-info">
+
+                        <h3>Gorra Camuflada 6</h3>
+
+                        <p>Calidad premium</p>
+                        <div class="stock">
+                            120 disponibles
+                        </div>
+
+                        <span>35 Bs</span>
+
+                        <button type="button"
+                        class="buy-btn"
+                                data-producto="Gorra Camuflada 6 - 35 Bs">
+
+                            Comprar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                
+
+                <div class="producto-card">
+
+                    <img src="imagenes/camuflado7.jpg"
+                         alt="Gorra Camuflada 7">
+
+                    <div class="producto-info">
+
+                        <h3>Gorra Camuflada 7</h3>
+
+                        <p>Calidad premium</p>
+                        <div class="stock">
+                            120 disponibles
+                        </div>
+
+                        <span>35 Bs</span>
+
+                        <button type="button"
+                        class="buy-btn"
+                                data-producto="Gorra Camuflada 7 - 35 Bs">
+
+                            Comprar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+               
+
+                <div class="producto-card">
+
+                    <img src="imagenes/camuflado8.webp"
+                         alt="Gorra Camuflada 8">
+
+                    <div class="producto-info">
+
+                        <h3>Gorra Camuflada 8</h3>
+
+                        <p>Calidad premium</p>
+                        <div class="stock">
+                            120 disponibles
+                        </div>
+
+                        <span>35 Bs</span>
+
+                        <button type="button"
+                        class="buy-btn"
+                                data-producto="Gorra Camuflada 8 - 35 Bs">
+
+                            Comprar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+             
+       
+
+        <div class="categoria-productos"
+             id="negras">
+
+            <h2 class="titulo-categoria">
+                GORRAS NEGRAS
+            </h2>
+
+            <div class="productos-grid">
+
+
+                
+
+                <div class="producto-card">
+
+                    <img src="imagenes/negro1.jpg"
+                         alt="Gorra Negra 1">
+
+                    <div class="producto-info">
+
+                        <h3>Gorra Negra 1</h3>
+
+                        <p>Calidad premium</p>
+                        <div class="stock">
+                            130 disponibles
+                        </div>
+
+                        <span>35 Bs</span>
+
+                        <button type="button"
+                        class="buy-btn"
+                                data-producto="Gorra Negra 1 - 35 Bs">
+
+                            Comprar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+               
+
+                <div class="producto-card">
+
+                    <img src="imagenes/negro2.webp"
+                         alt="Gorra Negra 2">
+
+                    <div class="producto-info">
+
+                        <h3>Gorra Negra 2</h3>
+
+                        <p>Calidad premium</p>
+                        <div class="stock">
+                            130 disponibles
+                        </div>
+
+
+                        <span>35 Bs</span>
+
+                        <button type="button"
+                        class="buy-btn"
+                                data-producto="Gorra Negra 2 - 35 Bs">
+
+                            Comprar
+
+                        </button>
+
+                    </div>
+               </div>
+
+       
+
+        <div class="producto-card">
+
+            <img src="imagenes/negro3.jpg"
+                 alt="Gorra Negra 3">
+
+            <div class="producto-info">
+
+                <h3>Gorra Negra 3</h3>
+
+                <p>Calidad premium</p>
+                <div class="stock">
+                            130 disponibles
+                        </div>
+
+
+                <span>35 Bs</span>
+
+                <button type="button"
+                class="buy-btn"
+                        data-producto="Gorra Negra 3 - 35 Bs">
+
+                    Comprar
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+       
+
+        <div class="producto-card">
+
+            <img src="imagenes/negro4.webp"
+                 alt="Gorra Negra 4">
+
+            <div class="producto-info">
+
+                <h3>Gorra Negra 4</h3>
+
+                <p>Calidad premium</p>
+                <div class="stock">
+                            130 disponibles
+                        </div>
+
+
+                <span>45 Bs</span>
+
+                <button type="button"
+                class="buy-btn"
+                        data-producto="Gorra Negra 4 - 45 Bs">
+
+                    Comprar
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+     
+
+        <div class="producto-card">
+
+            <img src="imagenes/negro5.jpg"
+                 alt="Gorra Negra 5">
+
+            <div class="producto-info">
+
+                <h3>Gorra Negra 5</h3>
+
+                <p>Calidad premium</p>
+                     <div class="stock">
+                            130 disponibles
+                        </div>
+
+                <span>35 Bs</span>
+
+                <button type="button"
+                class="buy-btn"
+                        data-producto="Gorra Negra 5 - 35 Bs">
+
+                    Comprar
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        
+
+        <div class="producto-card">
+
+            <img src="imagenes/negro6.webp"
+                 alt="Gorra Negra 6">
+
+            <div class="producto-info">
+
+                <h3>Gorra Negra 6</h3>
+
+                <p>Calidad premium</p>
+                <div class="stock">
+                            130 disponibles
+                        </div>
+
+                <span>40 Bs</span>
+
+                <button type="button"
+                class="buy-btn"
+                        data-producto="Gorra Negra 6 - 40 Bs">
+
+                    Comprar
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+       
+
+        <div class="producto-card">
+
+            <img src="imagenes/negro7.jpg"
+                 alt="Gorra Negra 7">
+
+            <div class="producto-info">
+
+                <h3>Gorra Negra 7</h3>
+
+                <p>Calidad premium</p>
+                <div class="stock">
+                            130 disponibles
+                        </div>
+
+
+                <span>40 Bs</span>
+
+                <button type="button"
+                class="buy-btn"
+                        data-producto="Gorra Negra 7 - 40 Bs">
+
+                    Comprar
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        
+
+        <div class="producto-card">
+
+            <img src="imagenes/negro8.jpg"
+                 alt="Gorra Negra 8">
+
+            <div class="producto-info">
+
+                <h3>Gorra Negra 8</h3>
+
+                <p>Calidad premium</p>
+                <div class="stock">
+                            130 disponibles
+                        </div>
+
+
+                <span>40 Bs</span>
+
+                <button type="button"
+                class="buy-btn"
+                        data-producto="Gorra Negra 8 - 40 Bs">
+
+                    Comprar
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+    
+
+
+</div>
+
+</section>
+
+
+
+   
+
+
+<section class="servicios"
+         id="servicios">
+
+    <div class="container">
+
+
+        <div class="titulo-productos">
+
+            <h2>NUESTROS SERVICIOS</h2>
+
+            <p>
+                Conoce lo que House Of Caps ofrece.
+            </p>
+
+        </div>
+
+
+        <div class="servicios-contenido">
+
+
+            
+
+            <div class="servicio">
+
+                <h3>Variedad de Gorras</h3>
+
+                <p>
+                    Diferentes modelos y diseños
+                    para todos los estilos.
+                </p>
+
+            </div>
+
+
+            
+
+            <div class="servicio">
+
+                <h3>Calidad Premium</h3>
+
+                <p>
+                    Productos cómodos y de
+                    excelente calidad.
+                </p>
+
+            </div>
+
+
+            
+
+            <div class="servicio">
+
+                <h3>Atención Personalizada</h3>
+
+                <p>
+                    Te ayudamos a encontrar
+                    la gorra ideal.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+  
+
+
+<section class="horarios"
+         id="horarios">
+
+    <div class="container">
+
+        <h2>
+            HORARIOS DE ATENCIÓN
+        </h2>
+
+
+        <div class="horario-card">
+
+            <h3>
+                Lunes a Viernes
+            </h3>
+
+            <p>
+                7:00 AM - 7:00 PM
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+     
+
+
+<section class="formulario-section"
+         id="formulario">
+
+    <div class="container">
+
+
+        <div class="formulario-contenido">
+
+
+            <h2>
+                REALIZA TU PEDIDO
+            </h2>
+
+
+            <p>
+                Completa tus datos para realizar tu pedido.
+            </p>
+
+
+            <form
+                id="pedidoForm"
+                action="https://formsubmit.co/carihigueraponce@gmail.com"
+                method="POST"
+            >
+
+
+                
+
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="Nuevo pedido - House Of Caps"
+                >
+
+
+        
+
+                <input
+                    type="hidden"
+                    name="_template"
+                    value="table"
+                >
+
+
+             
+
+                <input
+                    type="hidden"
+                    name="_captcha"
+                    value="false"
+                >
+
+
+                
+
+                <label for="nombre">
+                    Nombre completo
+                </label>
+
+                <input
+                    type="text"
+                    id="nombre"
+                    name="Nombre completo"
+                    placeholder="Escribe tu nombre completo"
+                    required
+                >
+
+
+                
+
+                <label for="telefono">
+                    Número de teléfono
+                </label>
+
+                <input
+                    type="tel"
+                    id="telefono"
+                    name="Número de teléfono"
+                    placeholder="Escribe tu número"
+                    required
+                >
+
+
+                
+
+                <label for="correo">
+                    Correo electrónico
+                </label>
+
+                <input
+                    type="email"
+                    id="correo"
+                    name="Correo electrónico"
+                    placeholder="Escribe tu correo"
+                    required
+                >
+
+
+              
+
+                <label for="producto">
+                    Producto seleccionado
+                </label>
+
+                <input type="text"
+                    id="producto"
+                    name="Producto seleccionado"
+                    placeholder="Selecciona una gorra"
+                    readonly
+                    required>
+
+                    <label for="cantidad">
+                    Cantidad
+                   </label>
+
+<input type="number"
+       id="cantidad"
+       name="Cantidad"
+       placeholder="¿Cuántas gorras deseas?"
+       min="1"
+       required>
+
+                <button type="submit">
+                    ENVIAR PEDIDO
+                </button>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+    
+
+
+<section class="ubicacion">
+
+    <div class="container">
+
+
+        <h2>
+            NUESTRA UBICACIÓN
+        </h2>
+
+
+        <p>
+            Puedes encontrar nuestra ubicación aquí:
+        </p>
+
+
+        <a
+            href="https://maps.app.goo.gl/bstJ5He7YKQkKgyX6"
+            target="_blank"
+            class="btn-mapa"
+        >
+
+            Ver ubicación en Google Maps
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+
+    
+
+
+<footer>
+
+    <h3>
+        HOUSE OF CAPS
+    </h3>
+
+
+    <p>
+        Encuentra tu estilo, usa tu gorra.
+    </p>
+
+</footer>
+
+
+
+
+  
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
+</script>
+
+
+
+
+<script src="index.js"></script>
+
+
+</body>
+
+</html>
