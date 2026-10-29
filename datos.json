@@ -1,0 +1,150 @@
+{
+  "productos": [
+    {
+      "nombre": "Gorra combinada 1",
+      "imagen": "imagenes/gorra3.webp",
+      "categoria": "Combinadas",
+      "precio": 35
+    },
+    {
+      "nombre": "Gorra combinada 2",
+      "imagen": "imagenes/gorra1.webp",
+      "categoria": "Combinadas",
+      "precio": 45
+    },
+    {
+      "nombre": "Gorra combinada 3",
+      "imagen": "imagenes/gorra5.webp",
+      "categoria": "Combinadas",
+      "precio": 40
+    },
+    {
+      "nombre": "Gorra combinada 4",
+      "imagen": "imagenes/gorra6.webp",
+      "categoria": "Combinadas",
+      "precio": 40
+    },
+    {
+      "nombre": "Gorra combinada 5",
+      "imagen": "imagenes/gorra7.webp",
+      "categoria": "Combinadas",
+      "precio": 45
+    },
+    {
+      "nombre": "Gorra combinada 6",
+      "imagen": "imagenes/gorra8.jpg",
+      "categoria": "Combinadas",
+      "precio": 35
+    },
+    {
+      "nombre": "Gorra combinada 7",
+      "imagen": "imagenes/gorra9.jpg",
+      "categoria": "Combinadas",
+      "precio": 35
+    },
+    {
+      "nombre": "Gorra combinada 8",
+      "imagen": "imagenes/images.jpg",
+      "categoria": "Combinadas",
+      "precio": 45
+    },
+
+    {
+      "nombre": "Gorra camuflada 1",
+      "imagen": "imagenes/camuflado1.jpg",
+      "categoria": "Camufladas",
+      "precio": 35
+    },
+    {
+      "nombre": "Gorra camuflada 2",
+      "imagen": "imagenes/camuflado2.jpg",
+      "categoria": "Camufladas",
+      "precio": 35
+    },
+    {
+      "nombre": "Gorra camuflada 3",
+      "imagen": "imagenes/camuflado3.jpg",
+      "categoria": "Camufladas",
+      "precio": 35
+    },
+    {
+      "nombre": "Gorra camuflada 4",
+      "imagen": "imagenes/camuflado4.jpg",
+      "categoria": "Camufladas",
+      "precio": 35
+    },
+    {
+      "nombre": "Gorra camuflada 5",
+      "imagen": "imagenes/camuflado5.jpg",
+      "categoria": "Camufladas",
+      "precio": 35
+    },
+    {
+      "nombre": "Gorra camuflada 6",
+      "imagen": "imagenes/camuflado6.jpg",
+      "categoria": "Camufladas",
+      "precio": 35
+    },
+    {
+      "nombre": "Gorra camuflada 7",
+      "imagen": "imagenes/camuflado7.jpg",
+      "categoria": "Camufladas",
+      "precio": 35
+    },
+    {
+      "nombre": "Gorra camuflada 8",
+      "imagen": "imagenes/camuflado8.webp",
+      "categoria": "Camufladas",
+      "precio": 35
+    },
+
+    {
+      "nombre": "Gorra negra 1",
+      "imagen": "imagenes/negro1.jpg",
+      "categoria": "Negras",
+      "precio": 35
+    },
+    {
+      "nombre": "Gorra negra 2",
+      "imagen": "imagenes/negro2.webp",
+      "categoria": "Negras",
+      "precio": 35
+    },
+    {
+      "nombre": "Gorra negra 3",
+      "imagen": "imagenes/negro3.jpg",
+      "categoria": "Negras",
+      "precio": 35
+    },
+    {
+      "nombre": "Gorra negra 4",
+      "imagen": "imagenes/negro4.webp",
+      "categoria": "Negras",
+      "precio": 45
+    },
+    {
+      "nombre": "Gorra negra 5",
+      "imagen": "imagenes/negro5.jpg",
+      "categoria": "Negras",
+      "precio": 35
+    },
+    {
+      "nombre": "Gorra negra 6",
+      "imagen": "imagenes/negro6.webp",
+      "categoria": "Negras",
+      "precio": 40
+    },
+    {
+      "nombre": "Gorra negra 7",
+      "imagen": "imagenes/negro7.jpg",
+      "categoria": "Negras",
+      "precio": 40
+    },
+    {
+      "nombre": "Gorra negra 8",
+      "imagen": "imagenes/negro8.jpg",
+      "categoria": "Negras",
+      "precio": 40
+    }
+  ]
+}
