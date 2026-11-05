@@ -13,7 +13,7 @@ html {
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #000;
-    color: #fff;
+    color: #070606;
 }
 
 .container {
@@ -317,9 +317,7 @@ header {
     color: #444;
 }
 
-/* =========================
-   HORARIOS
-========================= */
+
 
 .horarios {
     padding: 80px 0;
@@ -354,9 +352,7 @@ header {
 }
 
 
-/* =========================
-   FORMULARIO
-========================= */
+
 
 .formulario-section {
     padding: 80px 0;
@@ -420,9 +416,7 @@ header {
 }
 
 
-/* =========================
-   UBICACIÓN
-========================= */
+
 
 .ubicacion {
     padding: 70px 0;
@@ -453,9 +447,7 @@ header {
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+
 
 footer {
     background: #000;
@@ -470,9 +462,7 @@ footer h3 {
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+
 
 @media (max-width: 900px) {
 
@@ -544,4 +534,67 @@ footer h3 {
     .formulario-contenido {
         padding: 25px;
     }
+}
+
+
+.qr-pago {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #f8f8f8;
+}
+
+.qr-pago h3 {
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.qr-pago p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.qr-pago img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    display: block;
+    margin: 15px auto;
+}
+
+.numero-referencia {
+    color: #222 !important;
+    font-size: 17px;
+}
+
+.titulo-formulario {
+    color: #222;
+    font-size: 18px;
+    margin: 15px 0 20px;
+}
+
+#pedidoForm select,
+#pedidoForm textarea {
+    padding: 13px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#pedidoForm textarea {
+    resize: vertical;
+}
+
+.aviso-pago {
+    background: #fff3cd;
+    color: #664d03;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
 }

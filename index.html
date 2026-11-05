@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
+
 <head>
 
     <meta charset="UTF-8">
@@ -9,6 +10,11 @@
     initial-scale=1.0">
 
     <title>House Of Caps</title>
+    <meta property="og:title" content="HOUSE OF CAPS">
+<meta property="og:description" content="Encuentra tu estilo, usa tu gorra.">
+<meta property="og:image" content="AQUI_VA_EL_ENLACE_DE_LA_IMAGEN">
+<meta property="og:type" content="website">
+<meta property="og:url" content="AQUI_VA_EL_ENLACE_DE_TU_PAGINA">
 
     <link rel="stylesheet" href="index.css">
 
@@ -333,7 +339,7 @@
 
                         <p>Calidad premium</p>
                         <div class="stock">
-                            120 disponibles
+                            135 disponibles
                         </div>
 
                         <span>35 Bs</span>
@@ -393,7 +399,7 @@
 
                         <p>Calidad premium</p>
                         <div class="stock">
-                            120 disponibles
+                            130 disponibles
                         </div>
 
                         <span>40 Bs</span>
@@ -423,7 +429,7 @@
 
                         <p>Calidad premium</p>
                         <div class="stock">
-                            120 disponibles
+                            150 disponibles
                         </div>
 
                         <span>40 Bs</span>
@@ -484,7 +490,7 @@
 
                         <p>Calidad premium</p>
                         <div class="stock">
-                            120 disponibles
+                            140 disponibles
                         </div>
 
                         <span>35 Bs</span>
@@ -515,7 +521,7 @@
 
                         <p>Calidad premium</p>
                         <div class="stock">
-                            120 disponibles
+                            125 disponibles
                         </div>
 
                         <span>35 Bs</span>
@@ -595,7 +601,7 @@
 
                         <p>Calidad premium</p>
                         <div class="stock">
-                            120 disponibles
+                            130 disponibles
                         </div>
 
                         <span>35 Bs</span>
@@ -626,7 +632,7 @@
 
                         <p>Calidad premium</p>
                         <div class="stock">
-                            120 disponibles
+                            170 disponibles
                         </div>
 
                         <span>35 Bs</span>
@@ -657,7 +663,7 @@
 
                         <p>Calidad premium</p>
                         <div class="stock">
-                            120 disponibles
+                            130 disponibles
                         </div>
 
                         <span>35 Bs</span>
@@ -688,7 +694,7 @@
 
                         <p>Calidad premium</p>
                         <div class="stock">
-                            120 disponibles
+                            140 disponibles
                         </div>
 
                         <span>35 Bs</span>
@@ -719,7 +725,7 @@
 
                         <p>Calidad premium</p>
                         <div class="stock">
-                            120 disponibles
+                            130 disponibles
                         </div>
 
                         <span>35 Bs</span>
@@ -781,7 +787,7 @@
 
                         <p>Calidad premium</p>
                         <div class="stock">
-                            120 disponibles
+                            125 disponibles
                         </div>
 
                         <span>35 Bs</span>
@@ -812,7 +818,7 @@
 
                         <p>Calidad premium</p>
                         <div class="stock">
-                            120 disponibles
+                            125 disponibles
                         </div>
 
                         <span>35 Bs</span>
@@ -921,7 +927,7 @@
 
                 <p>Calidad premium</p>
                 <div class="stock">
-                            130 disponibles
+                            135 disponibles
                         </div>
 
 
@@ -953,7 +959,7 @@
 
                 <p>Calidad premium</p>
                 <div class="stock">
-                            130 disponibles
+                            140 disponibles
                         </div>
 
 
@@ -985,7 +991,7 @@
 
                 <p>Calidad premium</p>
                      <div class="stock">
-                            130 disponibles
+                            135 disponibles
                         </div>
 
                 <span>35 Bs</span>
@@ -1047,7 +1053,7 @@
 
                 <p>Calidad premium</p>
                 <div class="stock">
-                            130 disponibles
+                            120 disponibles
                         </div>
 
 
@@ -1079,7 +1085,7 @@
 
                 <p>Calidad premium</p>
                 <div class="stock">
-                            130 disponibles
+                            125 disponibles
                         </div>
 
 
@@ -1221,144 +1227,161 @@
      
 
 
-<section class="formulario-section"
-         id="formulario">
-
+<section class="formulario-section" id="formulario">
     <div class="container">
-
 
         <div class="formulario-contenido">
 
-
-            <h2>
-                REALIZA TU PEDIDO
-            </h2>
-
+            <h2>REALIZA TU PEDIDO</h2>
 
             <p>
-                Completa tus datos para realizar tu pedido.
+                Completa tus datos, realiza el pago y envía tu 
+                comprobante por WhatsApp.
+                Tu pedido será verificado antes de ser confirmado.
             </p>
+
+
+            <!-- QR DE PAGO -->
+
+            <div class="qr-pago">
+
+                <h3>1. REALIZA EL PAGO</h3>
+
+                <p>
+                    Escanea el siguiente código QR para realizar tu pago.
+                </p>
+
+                <img src="imagenes/QR pago.jpeg"
+                     alt="QR de pago">
+
+            </div>
 
 
             <form
                 id="pedidoForm"
-                action="https://formsubmit.co/carihigueraponce@gmail.com"
+                action="https://formsubmit.co/ajax/carihigueraponce@gmail.com"
                 method="POST"
             >
 
+                <input type="hidden"
+                       name="_subject"
+                       value="Nuevo pedido - House Of Caps">
 
-                
+                <input type="hidden"
+                       name="_template"
+                       value="table">
 
-                <input
-                    type="hidden"
-                    name="_subject"
-                    value="Nuevo pedido - House Of Caps"
-                >
-
-
-        
-
-                <input
-                    type="hidden"
-                    name="_template"
-                    value="table"
-                >
+                <input type="hidden"
+                       name="_captcha"
+                       value="false">
 
 
-             
+                <!-- DATOS DEL CLIENTE -->
 
-                <input
-                    type="hidden"
-                    name="_captcha"
-                    value="false"
-                >
+                <h3 class="titulo-formulario">
+                    2. COMPLETA TUS DATOS
+                </h3>
 
-
-                
 
                 <label for="nombre">
                     Nombre completo
                 </label>
 
-                <input
-                    type="text"
-                    id="nombre"
-                    name="Nombre completo"
-                    placeholder="Escribe tu nombre completo"
-                    required
-                >
+                <input type="text"
+                       id="nombre"
+                       name="Nombre completo"
+                       placeholder="Escribe tu nombre completo"
+                       required>
 
-
-                
 
                 <label for="telefono">
                     Número de teléfono
                 </label>
 
-                <input
-                    type="tel"
-                    id="telefono"
-                    name="Número de teléfono"
-                    placeholder="Escribe tu número"
-                    required
-                >
+                <input type="tel"
+                       id="telefono"
+                       name="Número de teléfono"
+                       placeholder="Escribe tu número"
+                       required>
 
-
-                
 
                 <label for="correo">
                     Correo electrónico
                 </label>
 
-                <input
-                    type="email"
-                    id="correo"
-                    name="Correo electrónico"
-                    placeholder="Escribe tu correo"
-                    required
-                >
+                <input type="email"
+                       id="correo"
+                       name="Correo electrónico"
+                       placeholder="Escribe tu correo"
+                       required>
 
 
-              
+                <!-- PRODUCTO -->
 
                 <label for="producto">
                     Producto seleccionado
                 </label>
 
                 <input type="text"
-                    id="producto"
-                    name="Producto seleccionado"
-                    placeholder="Selecciona una gorra"
-                    readonly
-                    required>
+                       id="producto"
+                       name="Producto seleccionado"
+                       placeholder="Selecciona una gorra"
+                       readonly
+                       required>
 
-                    <label for="cantidad">
+
+                <label for="cantidad">
                     Cantidad
-                   </label>
+                </label>
 
-<input type="number"
-       id="cantidad"
-       name="Cantidad"
-       placeholder="¿Cuántas gorras deseas?"
-       min="1"
-       required>
+                <input type="number"
+                       id="cantidad"
+                       name="Cantidad"
+                       placeholder="¿Cuántas gorras deseas?"
+                       min="1"
+                       required>
+
+
+                <!-- DIRECCIÓN -->
+
+                <h3 class="titulo-formulario">
+                    3. DIRECCIÓN DE ENTREGA
+                </h3>
+
+
+                <label for="zona">
+                    Zona de entrega
+                </label>
+
+                <select id="zona" name="zona" required>
+    <option value="">Selecciona tu zona</option>
+    <option value="Mercado Satélite Norte">Mercado Satélite Norte</option>
+    <option value="Juan Pablo II">Juan Pablo II</option>
+    <option value="21 de Septiembre">21 de Septiembre</option>
+</select>
+
+
+                <label for="direccion">
+                    Dirección de entrega
+                </label>
+
+                <textarea id="direccion"
+                          name="Dirección de entrega"
+                          placeholder="Escribe tu calle, avenida, barrio y número de casa"
+                          rows="4"
+                          required></textarea>
+
 
                 <button type="submit">
                     ENVIAR PEDIDO
                 </button>
 
-
             </form>
-
 
         </div>
 
     </div>
-
 </section>
-
-
-
 
     
 
@@ -1423,7 +1446,7 @@
 </script>
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <script src="index.js"></script>
 

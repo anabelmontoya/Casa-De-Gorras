@@ -1,148 +1,77 @@
 /* =========================================
+   INICIALIZAR EMAILJS
+========================================= */
+
+emailjs.init({
+    publicKey: "4eqZSjBUc_9gIXW2a"
+});
+
+
+/* =========================================
    STOCK INICIAL DE LAS 24 GORRAS
 ========================================= */
 
 var stockInicial = {
 
-    "Gorra Combinada 1": 120,
-    "Gorra Combinada 2": 80,
-    "Gorra Combinada 3": 150,
-    "Gorra Combinada 4": 100,
+    "Gorra Combinada 1": 135,
+    "Gorra Combinada 2": 120,
+    "Gorra Combinada 3": 130,
+    "Gorra Combinada 4": 150,
     "Gorra Combinada 5": 120,
-    "Gorra Combinada 6": 90,
-    "Gorra Combinada 7": 75,
-    "Gorra Combinada 8": 200,
+    "Gorra Combinada 6": 140,
+    "Gorra Combinada 7": 125,
+    "Gorra Combinada 8": 120,
 
-    "Gorra Camuflada 1": 100,
-    "Gorra Camuflada 2": 120,
-    "Gorra Camuflada 3": 80,
-    "Gorra Camuflada 4": 150,
-    "Gorra Camuflada 5": 90,
-    "Gorra Camuflada 6": 110,
-    "Gorra Camuflada 7": 70,
-    "Gorra Camuflada 8": 130,
+    "Gorra Camuflada 1": 130,
+    "Gorra Camuflada 2": 170,
+    "Gorra Camuflada 3": 130,
+    "Gorra Camuflada 4": 140,
+    "Gorra Camuflada 5": 130,
+    "Gorra Camuflada 6": 120,
+    "Gorra Camuflada 7": 125,
+    "Gorra Camuflada 8": 125,
 
-    "Gorra Negra 1": 120,
-    "Gorra Negra 2": 100,
-    "Gorra Negra 3": 150,
-    "Gorra Negra 4": 80,
-    "Gorra Negra 5": 100,
-    "Gorra Negra 6": 90,
-    "Gorra Negra 7": 110,
-    "Gorra Negra 8": 75
+    "Gorra Negra 1": 130,
+    "Gorra Negra 2": 130,
+    "Gorra Negra 3": 135,
+    "Gorra Negra 4": 140,
+    "Gorra Negra 5": 135,
+    "Gorra Negra 6": 130,
+    "Gorra Negra 7": 120,
+    "Gorra Negra 8": 125
+
 };
 
 
 /* =========================================
-   CARGAR STOCK
+   CARGAR STOCK GUARDADO
 ========================================= */
 
-var stockGuardado =
-    localStorage.getItem("stockHouseOfCaps");
+var stockGuardado = localStorage.getItem("stockHouseOfCaps");
 
-var stock;
+var stock = stockGuardado
+    ? JSON.parse(stockGuardado)
+    : { ...stockInicial };
 
-if (stockGuardado) {
-
-    stock = JSON.parse(stockGuardado);
-
-} else {
-
-    stock = { ...stockInicial };
+if (!stockGuardado) {
 
     localStorage.setItem(
         "stockHouseOfCaps",
         JSON.stringify(stock)
     );
+
 }
 
 
 /* =========================================
-   CARRUSEL PRINCIPAL
-========================================= */
-
-var swiperPrincipal =
-    new Swiper(".mySwiper-1", {
-
-        loop: true,
-
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false
-        },
-
-        navigation: {
-            nextEl: ".mySwiper-1 .swiper-button-next",
-            prevEl: ".mySwiper-1 .swiper-button-prev"
-        },
-
-        pagination: {
-            el: ".mySwiper-1 .swiper-pagination",
-            clickable: true
-        }
-
-    });
-
-
-/* =========================================
-   MOSTRAR CATEGORÍA
-========================================= */
-
-function mostrarCategoria(categoria, boton) {
-
-    var categorias =
-        document.querySelectorAll(".categoria-productos");
-
-    categorias.forEach(function(elemento) {
-
-        elemento.classList.remove("activa");
-
-    });
-
-
-    var categoriaSeleccionada =
-        document.getElementById(categoria);
-
-    if (categoriaSeleccionada) {
-
-        categoriaSeleccionada.classList.add("activa");
-
-    }
-
-
-    var botones =
-        document.querySelectorAll(".categoria-btn");
-
-    botones.forEach(function(elemento) {
-
-        elemento.classList.remove("activo");
-
-    });
-
-
-    boton.classList.add("activo");
-}
-
-
-/* =========================================
-   MOSTRAR STOCK
+   ACTUALIZAR VISUALMENTE EL STOCK
 ========================================= */
 
 function actualizarStockVisual() {
 
-    var tarjetas =
-        document.querySelectorAll(".producto-card");
+    var botones = document.querySelectorAll(".buy-btn");
 
-
-    tarjetas.forEach(function(tarjeta) {
-
-        var boton =
-            tarjeta.querySelector(".buy-btn");
-
-        if (!boton) {
-            return;
-        }
-
+    botones.forEach(function(boton) {
 
         var productoCompleto =
             boton.getAttribute("data-producto");
@@ -151,99 +80,130 @@ function actualizarStockVisual() {
             return;
         }
 
-
         var producto =
             productoCompleto.split(" - ")[0];
 
+        var cantidad = stock[producto];
 
-        if (stock[producto] === undefined) {
+        var tarjeta =
+            boton.closest(".producto-card");
+
+        if (!tarjeta) {
             return;
         }
 
+        var textoStock =
+            tarjeta.querySelector(".stock");
 
-        var cantidad =
-            stock[producto];
+        if (!textoStock) {
 
+            textoStock = document.createElement("p");
+            textoStock.className = "stock";
 
-        var informacion =
-            tarjeta.querySelector(".producto-info");
-
-        if (!informacion) {
-            return;
-        }
-
-
-        var stockElemento =
-            informacion.querySelector(".stock");
-
-
-        if (!stockElemento) {
-
-            stockElemento =
-                document.createElement("div");
-
-            stockElemento.className = "stock";
-
-
-            var precio =
-                informacion.querySelector("span");
-
+            var precio = tarjeta.querySelector("span");
 
             if (precio) {
-
-                informacion.insertBefore(
-                    stockElemento,
+                precio.parentNode.insertBefore(
+                    textoStock,
                     precio
                 );
-
-            } else {
-
-                informacion.appendChild(
-                    stockElemento
-                );
-
             }
 
         }
 
+        if (cantidad <= 0) {
 
-        if (cantidad > 0) {
+            textoStock.textContent = "AGOTADO";
+            textoStock.classList.add("agotado");
 
-    stockElemento.textContent =
-        cantidad + " disponibles";
+            boton.disabled = true;
+            boton.textContent = "AGOTADO";
 
-    stockElemento.classList.remove("agotado");
+        } else {
 
-    boton.disabled = false;
+            textoStock.textContent =
+                cantidad + " disponibles";
 
-    boton.textContent = "Comprar";
+            textoStock.classList.remove("agotado");
 
-} else {
+            boton.disabled = false;
+            boton.textContent = "Comprar";
 
-    /* MOSTRAR AGOTADO EN LA TARJETA */
-
-    stockElemento.textContent =
-        "AGOTADO";
-
-    stockElemento.classList.add("agotado");
-
-    /* CAMBIAR EL BOTÓN */
-
-    boton.disabled = false;
-
-    boton.textContent =
-        "AGOTADO";
-}
+        }
 
     });
+
 }
 
 
 /* =========================================
-   MOSTRAR STOCK AL CARGAR
+   CARRUSEL PRINCIPAL
 ========================================= */
 
-actualizarStockVisual();
+var swiperPrincipal = new Swiper(".mySwiper-1", {
+
+    loop: true,
+
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+    },
+
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    },
+
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+    }
+
+});
+
+
+/* =========================================
+   MOSTRAR CATEGORÍAS
+========================================= */
+
+function mostrarCategoria(categoria, boton) {
+
+    var categorias =
+        document.querySelectorAll(".categoria-productos");
+
+    categorias.forEach(function(seccion) {
+
+        seccion.classList.remove("activa");
+
+    });
+
+    var seleccionada =
+        document.getElementById(categoria);
+
+    if (seleccionada) {
+
+        seleccionada.classList.add("activa");
+
+    }
+
+    var botones =
+        document.querySelectorAll(".categoria-btn");
+
+    botones.forEach(function(btn) {
+
+        btn.classList.remove("activo");
+
+    });
+
+    if (boton) {
+
+        boton.classList.add("activo");
+
+    }
+
+    actualizarStockVisual();
+
+}
 
 
 /* =========================================
@@ -252,78 +212,34 @@ actualizarStockVisual();
 
 document.addEventListener("click", function(event) {
 
-    var boton =
-        event.target.closest(".buy-btn");
-
-    if (!boton) {
+    if (!event.target.classList.contains("buy-btn")) {
         return;
     }
 
+    var boton = event.target;
+
+    if (boton.disabled) {
+        return;
+    }
 
     var productoCompleto =
         boton.getAttribute("data-producto");
-
 
     if (!productoCompleto) {
         return;
     }
 
-
-    var producto =
-        productoCompleto.split(" - ")[0];
-
-
-    var disponible =
-        stock[producto];
-
-
-    /* PRODUCTO AGOTADO */
-
-    if (disponible <= 0) {
-
-        alert(
-            "⚠️ PRODUCTO AGOTADO\n\n" +
-            "Lo sentimos, " +
-            producto +
-            " ya no tiene unidades disponibles."
-        );
-
-        return;
-    }
-
-
-    /* COLOCAR PRODUCTO */
-
     var campoProducto =
         document.getElementById("producto");
 
-
     if (campoProducto) {
 
-        campoProducto.value =
-            productoCompleto;
+        campoProducto.value = productoCompleto;
 
     }
-
-
-    /* BORRAR CANTIDAD ANTERIOR */
-
-    var campoCantidad =
-        document.getElementById("cantidad");
-
-
-    if (campoCantidad) {
-
-        campoCantidad.value = "";
-
-    }
-
-
-    /* IR AL FORMULARIO */
 
     var formularioSeccion =
         document.getElementById("formulario");
-
 
     if (formularioSeccion) {
 
@@ -337,204 +253,161 @@ document.addEventListener("click", function(event) {
 
 
 /* =========================================
-   FORMULARIO
+   FORMULARIO DE PEDIDOS CON MYSQL
 ========================================= */
 
-var formulario =
-    document.getElementById("pedidoForm");
-
+var formulario = document.getElementById("pedidoForm");
 
 if (formulario) {
 
-    formulario.addEventListener(
-        "submit",
-        function(event) {
+    formulario.addEventListener("submit", async function(event) {
 
+        event.preventDefault();
 
-            var productoCompleto =
-                document.getElementById("producto").value;
+        var nombre = document.getElementById("nombre").value.trim();
+        var telefono = document.getElementById("telefono").value.trim();
+        var correo = document.getElementById("correo").value.trim();
+        var productoCompleto = document.getElementById("producto").value;
+        var cantidad = parseInt(document.getElementById("cantidad").value);
+        var zona = document.getElementById("zona").value;
+        var direccion = document.getElementById("direccion").value.trim();
 
+        if (
+            !nombre || !telefono || !correo ||
+            !productoCompleto || isNaN(cantidad) ||
+            cantidad <= 0 || !zona || !direccion
+        ) {
+            alert("Por favor, completa todos los campos.");
+            return;
+        }
 
-            var cantidad =
-                parseInt(
-                    document.getElementById("cantidad").value
+        var producto = productoCompleto.split(" - ")[0];
+
+        var botonEnviar = formulario.querySelector('[type="submit"]');
+
+        if (botonEnviar) {
+            botonEnviar.disabled = true;
+        }
+
+        try {
+
+            // GUARDAR PEDIDO EN MYSQL
+
+            var respuesta = await fetch("http://localhost:3000/pedidos", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    nombre: nombre,
+                    telefono: telefono,
+                    correo: correo,
+                    producto: productoCompleto,
+                    cantidad: cantidad,
+                    zona: zona,
+                    direccion: direccion
+                })
+            });
+
+            var resultado = await respuesta.json();
+
+            if (!respuesta.ok) {
+                throw new Error(
+                    resultado.error || "No se pudo guardar el pedido."
                 );
-
-
-            /* ==============================
-               COMPROBAR PRODUCTO
-            ============================== */
-
-            if (productoCompleto === "") {
-
-                event.preventDefault();
-
-                alert(
-                    "⚠️ Por favor selecciona una gorra."
-                );
-
-                return;
             }
 
+            // ACTUALIZAR EL STOCK LOCAL PARA MOSTRARLO
 
-            /* ==============================
-               COMPROBAR CANTIDAD
-            ============================== */
-
-            if (isNaN(cantidad) || cantidad <= 0) {
-
-                event.preventDefault();
-
-                alert(
-                    "⚠️ Ingresa una cantidad válida."
-                );
-
-                return;
-            }
-
-
-            /* ==============================
-               OBTENER PRODUCTO
-            ============================== */
-
-            var producto =
-                productoCompleto.split(" - ")[0];
-
-
-            /* ==============================
-               OBTENER STOCK
-            ============================== */
-
-            var disponible =
-                stock[producto];
-
-
-            if (disponible === undefined) {
-
-                event.preventDefault();
-
-                alert(
-                    "⚠️ No se encontró el stock de este producto."
-                );
-
-                return;
-            }
-
-
-            /* ==============================
-               PRODUCTO AGOTADO
-            ============================== */
-
-            if (disponible <= 0) {
-
-                event.preventDefault();
-
-                alert(
-                    "⚠️ PRODUCTO AGOTADO\n\n" +
-                    "Lo sentimos, " +
-                    producto +
-                    " ya no tiene unidades disponibles."
-                );
-
-                actualizarStockVisual();
-
-                return;
-            }
-
-
-            /* ==============================
-               MÁS DEL STOCK DISPONIBLE
-            ============================== */
-
-            if (cantidad > disponible) {
-
-                event.preventDefault();
-
-                alert(
-                    "⚠️ NO SE PUEDE REALIZAR LA COMPRA\n\n" +
-                    "Producto: " +
-                    producto +
-                    "\n\n" +
-                    "Solo quedan " +
-                    disponible +
-                    " gorras disponibles.\n\n" +
-                    "Has solicitado " +
-                    cantidad +
-                    " gorras."
-                );
-
-                return;
-            }
-
-
-            /* ==============================
-               DESCONTAR STOCK
-            ============================== */
-
-            stock[producto] =
-                disponible - cantidad;
-
-
-            /* GUARDAR STOCK */
+            stock[producto] = resultado.stockRestante;
 
             localStorage.setItem(
                 "stockHouseOfCaps",
                 JSON.stringify(stock)
             );
 
-
-            /* ACTUALIZAR PANTALLA */
-
             actualizarStockVisual();
 
+            // PREPARAR MENSAJE DE WHATSAPP
 
-            /* ==============================
-               MENSAJE DE COMPRA
-            ============================== */
+            var mensajeWhatsApp =
+                "🏠 HOUSE OF CAPS — PEDIDO DESDE LA PÁGINA\n\n" +
+                "👤 Nombre: " + nombre + "\n" +
+                "📱 Teléfono: " + telefono + "\n" +
+                "📧 Correo: " + correo + "\n" +
+                "🧢 Producto: " + productoCompleto + "\n" +
+                "🔢 Cantidad: " + cantidad + "\n" +
+                "📍 Zona: " + zona + "\n" +
+                "🏠 Dirección: " + direccion + "\n" +
+                "Gracias por comprar en House Of Caps. 💜";
 
-            if (stock[producto] > 0) {
+            var enlaceWhatsApp =
+                "https://wa.me/59163391075?text=" +
+                encodeURIComponent(mensajeWhatsApp);
 
-                alert(
-                    "✅ PEDIDO REALIZADO\n\n" +
-                    "Producto: " +
-                    producto +
-                    "\n\n" +
-                    "Cantidad comprada: " +
-                    cantidad +
-                    "\n\n" +
-                    "Quedan " +
-                    stock[producto] +
-                    " disponibles."
+            // ENVIAR CORREO
+
+            var datosPedido = {
+                nombre: nombre,
+                telefono: telefono,
+                correo: correo,
+                producto: productoCompleto,
+                cantidad: cantidad,
+                zona: zona,
+                direccion: direccion
+            };
+
+            try {
+                await emailjs.send(
+                    "service_ykb2bpr",
+                    "template_a4ihom1",
+                    datosPedido
                 );
 
-            } else {
+                console.log("Correo enviado correctamente.");
 
-                alert(
-                    "✅ PEDIDO REALIZADO\n\n" +
-                    "Producto: " +
-                    producto +
-                    "\n\n" +
-                    "Se vendieron las últimas unidades.\n\n" +
-                    "El producto ahora está AGOTADO."
-                );
-
+            } catch (errorCorreo) {
+                console.error("No se pudo enviar el correo:", errorCorreo);
+                alert("El pedido se guardó en MySQL, pero no se pudo enviar el correo.");
             }
 
-            /*
-               NO ponemos preventDefault aquí.
-               Por eso el formulario puede enviarse
-               normalmente a FormSubmit.
-            */
+            alert(
+                "¡Pedido guardado correctamente!\n" +
+                "Número de pedido: " + resultado.pedidoId
+            );
+
+            formulario.reset();
+
+            // ABRIR WHATSAPP
+
+            window.location.href = enlaceWhatsApp;
+
+        } catch (error) {
+
+            console.error("Error al guardar el pedido:", error);
+
+            alert("No se pudo guardar el pedido: " + error.message);
+
+        } finally {
+
+            if (botonEnviar) {
+                botonEnviar.disabled = false;
+            }
 
         }
-    );
+
+    });
 
 }
-fetch("datos.json")
-  .then(response => response.json())
-  .then(data => {
-    console.log("Productos cargados:", data.productos);
-  })
-  .catch(error => {
-    console.error("Error al cargar la base de datos:", error);
-  });
+/* =========================================
+   ACTUALIZAR STOCK AL CARGAR LA PÁGINA
+========================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        actualizarStockVisual();
+
+    }
+);
